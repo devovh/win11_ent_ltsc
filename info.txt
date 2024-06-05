@@ -1,0 +1,33 @@
+https://store.rg-adguard.net/
+
+wsreset -i
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+                                                                                                                        Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows                                                                                                                                                       PS C:\WINDOWS\system32> Set-ExecutionPolicy Unrestricted                                                                                                                                                                                        Execution Policy Change                                                                                                 The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose   you to the security risks described in the about_Execution_Policies help topic at                                       https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?                              [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): y                               PS C:\WINDOWS\system32> add-appxpackage -disabledevelopmentmode -register ((Get-AppxPackage Microsoft.SecHealthUI -allusers).InstallLocation + '\AppxManifest.xml')                                                                             add-appxpackage : Cannot find path 'C:\AppxManifest.xml' because it does not exist.                                     At line:1 char:1                                                                                                        + add-appxpackage -disabledevelopmentmode -register ((Get-AppxPackage M ...                                             + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                     + CategoryInfo          : ObjectNotFound: (C:\AppxManifest.xml:String) [Add-AppxPackage], ItemNotFoundException         + FullyQualifiedErrorId : PathNotFound,Microsoft.Windows.Appx.PackageManager.Commands.AddAppxPackageCommand                                                                                                                                 PS C:\WINDOWS\system32> Add-AppxPackage -Path "C:\Users\alfa\Downloads\Microsoft.SecHealthUI_8wekyb3d8bbwe.appx"        Add-AppxPackage : Deployment failed with HRESULT: 0x80073CF3, Pakiet nie przeszedł weryfikacji aktualizacji, zależności  lub konfliktów.                                                                                                        Windows cannot install package Microsoft.SecHealthUI_1000.25305.9000.0_x64__8wekyb3d8bbwe because this package depends  on a framework that could not be found. Provide the framework "Microsoft.UI.Xaml.2.7" published by "CN=Microsoft Corpor ation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US", with neutral or x64 processor architecture and minimum  version 7.2203.17001.0, along with this package to install.                                                             NOTE: For additional information, look for [ActivityId] d52d78ca-b784-000a-f7de-2fd584b7da01 in the Event Log or use th e command line Get-AppPackageLog -ActivityID d52d78ca-b784-000a-f7de-2fd584b7da01                                       At line:1 char:1                                                                                                        + Add-AppxPackage -Path "C:\Users\alfa\Downloads\Microsoft.SecHealthUI_ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\alfa\D...kyb3d8bbwe.appx:String) [Add-AppxPackage], IOException
+    + FullyQualifiedErrorId : DeploymentError,Microsoft.Windows.Appx.PackageManager.Commands.AddAppxPackageCommand
+
+PS C:\WINDOWS\system32> Add-AppxPackage -Path "C:\Users\alfa\Downloads\Microsoft.UI.Xaml.2.4_2.42007.9001.0_x64__8wekyb3d8bbwe.appx"                                                                                                            PS C:\WINDOWS\system32> Add-AppxPackage -Path "C:\Users\alfa\Downloads\Microsoft.SecHealthUI_8wekyb3d8bbwe.appx"        Add-AppxPackage : Deployment failed with HRESULT: 0x80073CF3, Pakiet nie przeszedł weryfikacji aktualizacji, zależności  lub konfliktów.                                                                                                        Windows cannot install package Microsoft.SecHealthUI_1000.25305.9000.0_x64__8wekyb3d8bbwe because this package depends  on a framework that could not be found. Provide the framework "Microsoft.UI.Xaml.2.7" published by "CN=Microsoft Corpor ation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US", with neutral or x64 processor architecture and minimum
+version 7.2203.17001.0, along with this package to install.
+NOTE: For additional information, look for [ActivityId] d52d78ca-b784-000a-d92b-30d584b7da01 in the Event Log or use th
+e command line Get-AppPackageLog -ActivityID d52d78ca-b784-000a-d92b-30d584b7da01
+At line:1 char:1
++ Add-AppxPackage -Path "C:\Users\alfa\Downloads\Microsoft.SecHealthUI_ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\alfa\D...kyb3d8bbwe.appx:String) [Add-AppxPackage], IOException
+    + FullyQualifiedErrorId : DeploymentError,Microsoft.Windows.Appx.PackageManager.Commands.AddAppxPackageCommand
+
+PS C:\WINDOWS\system32> choco install microsoft-ui-xaml-2-7
+choco : The term 'choco' is not recognized as the name of a cmdlet, function, script file, or operable program. Check t
+he spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ choco install microsoft-ui-xaml-2-7
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (choco:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> Add-AppxPackage -Path "C:\Users\alfa\Downloads\Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe.Appx"
+PS C:\WINDOWS\system32> Add-AppxPackage -Path "C:\Users\alfa\Downloads\Microsoft.SecHealthUI_8wekyb3d8bbwe.appx"
+PS C:\WINDOWS\system32>
